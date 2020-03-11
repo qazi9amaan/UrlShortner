@@ -25,38 +25,17 @@
    
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Shorten url</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span style="color: #ffc300;" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <input  style = "width: 100%;" class = "lead" type="text" name="" id="myInput"  value="http://kirangle.com/">
-      </div>
-      <div class="modal-footer" style="
-    margin-top: -27px;
-">
-        <button hidden type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button"  onclick="myFunction()"  id = "copybtn"class="btn btn-primary yellow"> Copy</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
   <div class='tile' id='b'>
-<p id = "info" align = "right" class="lead"> <a href="api.php" style="margin-right: 12px;">&#x1F6C8;</a></p>
+<p id = "info" align = "light" class="lead"> <a href="index.php" style="margin-left: 12px;">&#9783;</a></p>
     <div class="container">
     <div class="row">
         <div class="col-md-12">
             <header>
-     <h1 class="display-4" style="margin-top: -56px;"> Kirangle Url Shortner</h1>
-      <p class = "lead"> Nice to see you here </p>
+     <h1 class="display-4" style="margin-top: -56px;"> Kirangle Url Shortner </h1>
+      <p class = "lead">Check our api service </p>
    <div class="circle"><a href="#a" class="round-button"><i class="  fa fa-angle-down"></i></a></div>
 
     </header>
@@ -69,9 +48,9 @@
 <div class='tile' id='a'>
 
   <header>
-      <h1 class = "display-5"> Whats your url? </h1>
-      <input class = "lead" type="text" name="" id="url"  placeholder="http://kirangle.com/"><br>
-      <input type="submit" data-toggle="modal" data-target="#exampleModalLong"class = "create" value="Create">
+      <h1 class = "display-5"> Redirect your url to  </h1>
+      <input disabled class = "lead" type="text" name="" id="url"  value="short.kirangle.com/apiservice?link=''&returnto=''"><br>
+      <input type="submit" onclick="myFunction()" class = "create" value="Copy">
 
    
     </header>
@@ -91,21 +70,17 @@
       
       <script>
 function myFunction() {
-  var copyText = document.getElementById("myInput");
+  var copyText = document.getElementById("url");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  
-  var tooltip = document.getElementById("myTooltip");
+  alert("The link has been copied!");
   }   
 
 
 </script>
 
 
-    <script>
-      $('#exampleModalCenter').modal('show')
-    </script>
     
 
   </body>
