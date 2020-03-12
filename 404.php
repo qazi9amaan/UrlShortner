@@ -1,3 +1,11 @@
+<?php
+    if(isset($_POST['Home']))
+    {
+        header('Location:home');
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +22,9 @@
 
      <link href="css/ct-navbar.css" rel="stylesheet" /> 
       <link href="css/main.css" rel="stylesheet" /> 
+    
+    
+
 
     <title>Kirangle|Url Shortner</title>
   </head>
@@ -27,41 +38,28 @@
  transition: transform .2s; 
   color: #333;
 }
+
+.lead{
+    color:#ffc300;
+}
   </style>
   <body>
 
    
 
-<!-- Modal -->
-
-
-
-  <div class='tile' id='b'>
-<p id = "info" align = "light" class="lead"> <a data-toggle="tooltip" title="Home" href="home" style="TEXT-ALIGN: CENTER; margin-left: 12px;">&#9783;</a></p>
-    <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <header>
-     <h1 class="display-4" style="margin-top: -56px;"> Kirangle Url Shortner </h1>
-      <p class = "lead">Check our api service </p>
-   <div class="circle"><a href="#a" class="round-button"><i class="  fa fa-angle-down trans"></i></a></div>
-
-    </header>
-        </div>
-    </div>
-</div>
-
   
-</div>
+
+
 <div class='tile' id='a'>
 
   <header>
-      <h1 class = "display-5"> Redirect your url to  </h1>
-      <input disabled class = "lead" type="text" name="" id="url"  value="tiny.kirangle.com/apiservice/link/returnto/variable"><br>
-      <input style="margin-top: 12px;" type="submit" onclick="copyapi()" class = "create" value="Copy">
-
+      <h1 class = "display-3"> 404 </h1>
+      <h1 class = "display-5"> Page not found </h1>
+      <p class="lead">We are sorry, the page you requested coud not be found.Please go back to the homepage.</p>
+      <form action="404.php" method="post">
+      <input type="submit" style="margin-top: 12px;" name = "Home" class = "create" value="Home">
+      </form>  
     </header>
-    
 </div>
 
    
@@ -75,15 +73,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      
       <script src="js/main.js"></script>
-
-
-    <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
+      
+      <script>
+       
+        
 </script>
 
+
+ 
   </body>
 </html>

@@ -16,10 +16,12 @@ html { font-family: Saira Extra Condense;
 
 
 .fa:hover{
+  transform: scale(1.5);
   font-size: 60px;
 }
 .fa{
- font-size: 55px;
+ 
+ transition: transform .2s; 
   color: #333;
 }
 .lead{

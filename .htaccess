@@ -1,0 +1,23 @@
+
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME}.php -f
+
+
+RewriteRule ^api$ api.php
+RewriteRule ^home index.php
+
+RewriteRule ^404 404.php
+RewriteRule ^create func.php
+
+RewriteRule ^func/([0-9a-zA-Z_-]+.[a-zA-Z]+)/([0-9a-zA-Z_-]+.[a-zA-Z]+) func.php?link=$1&ret=$2
+
+RewriteRule ^apiservice/([0-9a-zA-Z_-]+.[a-zA-Z]+)/([0-9a-zA-Z_-]+.[a-zA-Z]+) apiservice.php?link=$1&returnto=$2
+
+RewriteRule ^(\w+)$ ./index.php?title=$1
+
+ 
+ 
+
